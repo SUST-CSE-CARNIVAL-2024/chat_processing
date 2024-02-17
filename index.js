@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 
 // routes
 const emotionRoutes = require("./routes/emotion");
+const mentorRoutes = require("./routes/mentor");
 
 //running app
 const app = express();
@@ -13,6 +14,7 @@ dotenv.config();
 
 //middlewares
 app.use("/api/emotion", emotionRoutes);
+app.use("/api/mentor", mentorRoutes);
 
 const server = app.listen(process.env.PORT, () => {
   console.log(`backend server is running at port ${process.env.PORT}`);
